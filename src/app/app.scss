@@ -645,4 +645,17 @@ html {
 
 .service-card:nth-child(7) {
   animation-delay: 0.7s;
+}/* Click
+able elements cursor */
+.nav-menu a,
+.btn-primary,
+.btn-secondary,
+.footer-section a {
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-menu a:hover,
+.footer-section a:hover {
+  opacity: 0.8;
 }
