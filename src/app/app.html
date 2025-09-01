@@ -17,10 +17,10 @@
     </button>
 
     <ul class="nav-menu" [class.mobile-open]="isMobileMenuOpen">
-      <li><a href="#home" (click)="closeMobileMenu()">Home</a></li>
-      <li><a href="#services" (click)="closeMobileMenu()">Services</a></li>
-      <li><a href="#about" (click)="closeMobileMenu()">About</a></li>
-      <li><a href="#contact" (click)="closeMobileMenu()">Contact</a></li>
+      <li><a (click)="scrollToSection('home')">Home</a></li>
+      <li><a (click)="scrollToSection('services')">Services</a></li>
+      <li><a (click)="scrollToSection('about')">About</a></li>
+      <li><a (click)="scrollToSection('contact')">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -34,8 +34,8 @@
       <p class="hero-description">Comprehensive solutions for accommodation, education, transportation, and more. We're
         here to make your life easier.</p>
       <div class="hero-buttons">
-        <a href="#services" class="btn-primary">Our Services</a>
-        <a href="#contact" class="btn-secondary">Get in Touch</a>
+        <a (click)="scrollToSection('services')" class="btn-primary">Our Services</a>
+        <a (click)="scrollToSection('contact')" class="btn-secondary">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -203,10 +203,10 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a (click)="scrollToSection('home')">Home</a></li>
+          <li><a (click)="scrollToSection('services')">Services</a></li>
+          <li><a (click)="scrollToSection('about')">About</a></li>
+          <li><a (click)="scrollToSection('contact')">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">
