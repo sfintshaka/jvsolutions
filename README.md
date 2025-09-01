@@ -1,59 +1,87 @@
-# JvSolutions
+# J & V Solutions Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+A modern, responsive website for J & V Solutions built with Angular 20. Features comprehensive services including accommodation, education, transportation, and more.
 
-## Development server
+## 🌟 Features
 
-To start a local development server, run:
+- **Modern Design**: Clean, professional layout with teal gradient theme
+- **Responsive**: Mobile-first design with hamburger navigation
+- **Services Showcase**: Complete overview of all company services
+- **Contact Form**: Functional contact form with validation
+- **WhatsApp Integration**: Direct WhatsApp contact button
+- **SEO Optimized**: Proper meta tags and semantic HTML
 
+## 🚀 Services Offered
+
+- Luxurious Apartment for Tourists
+- Student Accommodation
+- Car Rentals
+- Property Management and Maintenance
+- Medical Services Referrals
+- Visa Services (Waiving of Undesirable Status)
+- English Courses (Affiliated with University of Pretoria)
+
+## 🛠️ Technology Stack
+
+- **Framework**: Angular 20
+- **Styling**: SCSS with custom responsive design
+- **Forms**: Angular Reactive Forms
+- **Icons**: Custom SVG logo with brand colors
+- **Deployment**: Vercel
+
+## 📱 Mobile Features
+
+- Logo-only navigation on small screens
+- Hamburger menu with smooth animations
+- Touch-friendly interface
+- Optimized performance
+
+## 🚀 Development
+
+### Prerequisites
+- Node.js (v18 or higher)
+- Angular CLI
+
+### Installation
+```bash
+npm install
+```
+
+### Development Server
 ```bash
 ng serve
 ```
+Navigate to `http://localhost:4200/`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Build for Production
 ```bash
-ng generate component component-name
+ng build --configuration production
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🌐 Deployment
 
+### Vercel Deployment
+1. Push code to GitHub repository
+2. Connect repository to Vercel
+3. Deploy automatically with optimized build
+
+### Manual Deployment
 ```bash
-ng generate --help
+npm run build:vercel
 ```
 
-## Building
+## 📞 Contact Information
 
-To build the project run:
+- **Phone**: +27 73 123 3561, +27 61 830 8743
+- **WhatsApp**: Direct integration available
+- **Tagline**: "Your Needs come first"
 
-```bash
-ng build
-```
+## 🎨 Brand Colors
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **Primary**: Teal gradient (#2dd4bf to #0891b2)
+- **Logo**: Dark blue (#1e3a5f) with orange accent (#ff4500)
+- **Text**: Professional grays and whites
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Built with ❤️ for J & V Solutions
