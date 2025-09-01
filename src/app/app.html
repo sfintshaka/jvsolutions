@@ -1,0 +1,226 @@
+<!-- J & V Solutions Website -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <img src="logo.svg" alt="J & V Solutions" class="logo">
+      <div class="logo-text">
+        <h2>J & V SOLUTIONS</h2>
+        <p>Your Needs come first</p>
+      </div>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" [class.mobile-open]="isMobileMenuOpen">
+      <li><a href="#home" (click)="closeMobileMenu()">Home</a></li>
+      <li><a href="#services" (click)="closeMobileMenu()">Services</a></li>
+      <li><a href="#about" (click)="closeMobileMenu()">About</a></li>
+      <li><a href="#contact" (click)="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>J & V SOLUTIONS</h1>
+      <p class="hero-subtitle">Your Needs come first</p>
+      <p class="hero-description">Comprehensive solutions for accommodation, education, transportation, and more. We're
+        here to make your life easier.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">Our Services</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏨</div>
+          <h3>Luxurious Apartment for Tourists</h3>
+          <p>Premium accommodation for travelers seeking comfort and luxury during their stay.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3>Student Accommodation</h3>
+          <p>Safe and comfortable housing solutions for students pursuing their education.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Car Rentals</h3>
+          <p>Reliable vehicle rental services for all your transportation needs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Property Management and Maintenance</h3>
+          <p>Professional property management services to keep your investments in top condition.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏥</div>
+          <h3>Medical Services Referrals</h3>
+          <p>Connecting you with trusted healthcare professionals and medical services.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>Waiving of Undesirable Status</h3>
+          <p>Work, study and permanent residence visa assistance and documentation services.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📚</div>
+          <h3>English Courses</h3>
+          <p>Affiliated with University of Pretoria - Professional English language training programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About J & V Solutions</h2>
+          <p>At J & V Solutions, we believe that your needs come first. We are a comprehensive service provider
+            dedicated to making your life easier through our diverse range of professional services.</p>
+          <p>From luxury accommodation and student housing to car rentals and visa services, we've got you covered. Our
+            team of experienced professionals is committed to delivering exceptional service and ensuring your complete
+            satisfaction.</p>
+          <div class="about-features">
+            <div class="feature">
+              <span class="feature-icon">✓</span>
+              <span>Professional Service</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">✓</span>
+              <span>Customer-First Approach</span>
+            </div>
+            <div class="feature">
+              <span class="feature-icon">✓</span>
+              <span>Comprehensive Solutions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <p><strong>Call Now:</strong></p>
+              <p>+27 73 123 3561</p>
+              <p>+27 61 830 8743</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <p><strong>Email:</strong></p>
+              <p>[email]</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <p><strong>Address:</strong></p>
+              <p>[address]</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <h3>Send us a Message</h3>
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required [(ngModel)]="formData.name">
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required [(ngModel)]="formData.email">
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone" [(ngModel)]="formData.phone">
+          </div>
+          <div class="form-group">
+            <select id="service" name="service" required [(ngModel)]="formData.service">
+              <option value="">Select a Service</option>
+              <option value="tourist-apartment">Tourist Apartment</option>
+              <option value="student-accommodation">Student Accommodation</option>
+              <option value="car-rental">Car Rental</option>
+              <option value="property-management">Property Management</option>
+              <option value="medical-referrals">Medical Referrals</option>
+              <option value="visa-services">Visa Services</option>
+              <option value="english-courses">English Courses</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required
+              [(ngModel)]="formData.message"></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- WhatsApp Button -->
+<div class="whatsapp-button">
+  <a href="https://wa.me/27731233561" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="24" height="24">
+      <path fill="currentColor"
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>J & V Solutions</h3>
+        <p>Your Needs come first</p>
+        <p>Comprehensive solutions for all your accommodation, education, and service needs.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p>📞 +27 73 123 3561</p>
+        <p>📞 +27 61 830 8743</p>
+        <p>📧 [email]</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 J & V Solutions. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<router-outlet />
